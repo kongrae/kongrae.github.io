@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 · 포토 디톡스</title>
+<style>
+/* Plain reading page in the app's light palette. Published at https://kongrae.github.io/photo-detox/privacy.html (repository kongrae/kongrae.github.io, folder photo-detox/; until 2026-11-10 it was in the gh-pages of water-sort-survival under capture-detox/, docs/ANDROID.md). */
+:root { --bg: #F2F4F7; --panel: #FFFFFF; --text: #191F28; --muted: #6B7684; --accent: #2272EB; --line: #E5E8EB; color-scheme: light; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; word-break: keep-all; }
+main { max-width: 42rem; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; }
+h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--accent); }
+p, li { margin: .4rem 0; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: .9rem; margin: 0; }
+.box { background: var(--panel); border-radius: 12px; padding: 12px 16px; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+<main>
+  <h1>개인정보처리방침</h1>
+  <p class="meta">포토 디톡스(이전 이름 캡처 디톡스, Android · iOS 앱) · 시행일 2026년 11월 9일</p>
+
+  <h2>요약</h2>
+  <div class="box">
+    <p>포토 디톡스는 회원가입과 분석 도구가 없고, 무료로 쓰는 대신 <b>Google AdMob 광고</b>를 보여 줍니다. 사진과 캡처 이미지, 캡처에서 읽은 글자, 살린 캡처의 내용, 사진 분류·상태 분석 결과는 <b>기기 안에서만 처리</b>되며 개발자를 포함한 누구에게도 전송되지 않고 광고에도 쓰이지 않습니다. 다만 광고를 보여 주기 위해 Google AdMob이 광고 ID·IP 주소 등을 Google에 보내고(5항), 글자 인식에 쓰는 Google ML Kit가 기능 진단 정보를 Google에 보냅니다(4항).</p>
+  </div>
+
+  <h2>1. 앱이 사용하는 권한</h2>
+  <table>
+    <tr><th>권한</th><th>목적</th></tr>
+    <tr><td>사진 접근(전체 또는 선택한 사진)</td><td>스크린샷 폴더의 캡처를 찾아 썸네일을 만들고 글자를 읽어, 지울 캡처와 남길 캡처(기프티콘, 예약, 고지서 등)를 나눕니다. 또 앱을 열면 최근 180일의 스크린샷 아닌 사진을 최신 1,000장부터 기기 안에서 분석해, 종류(영수증, 문서·서류, 메모·필기, 주차 위치, 쇼핑·택배, 음식 사진), 흔들리거나 어두운 사진, 중복 사진별로 정리할 만한 사진이 몇 장인지 홈에 보여 줍니다('사진 정리하기'에서 '더 확인하기'를 누르면 1,000장씩 최대 3,000장). 한 번 분석한 사진은 다시 분석하지 않고, 사진 삭제 선택은 이용자가 직접 합니다.</td></tr>
+    <tr><td>미디어 관리(Android, 선택)</td><td>켜면 캡처나 선택한 사진을 휴지통으로 옮기거나 휴지통에서 영구 삭제할 때 안드로이드 확인 창을 띄우지 않습니다.</td></tr>
+    <tr><td>알림(선택)</td><td>새 캡처가 쌓인 날, 이용자가 정한 시각에 아침 알림을 보냅니다.</td></tr>
+    <tr><td>부팅 완료 수신(Android)</td><td>기기를 다시 켰을 때 아침 알림을 다시 겁니다.</td></tr>
+    <tr><td>진동</td><td>누르거나 넘길 때 짧게 진동합니다(설치할 때 자동으로 허용되는 일반 권한).</td></tr>
+    <tr><td>광고 ID(Android)</td><td>Google AdMob이 광고를 보여 주고 효과를 측정하며 부정 사용을 막는 데 씁니다(5항). 안드로이드 설정에서 재설정하거나 삭제할 수 있습니다.</td></tr>
+  </table>
+
+  <h2>2. 기기 안에 저장되는 정보</h2>
+  <table>
+    <tr><th>항목</th><th>목적</th><th>보관</th></tr>
+    <tr><td>캡처별 읽은 글자와 분류 결과, 작은 썸네일</td><td>다시 읽지 않고 바로 보여 주기</td><td rowspan="6">앱 삭제 또는 앱 데이터 삭제 시 함께 삭제</td></tr>
+    <tr><td>이전 버전에서 살린 캡처의 내용(상품명, 날짜, 금액, 계좌 등 캡처에서 읽은 것)</td><td>살린 것 목록</td></tr>
+    <tr><td>사진 정리용 원본 식별 정보·분류 결과·썸네일, 선명도·밝기·중복 비교용 지문, 선택한 사진 종류</td><td>사진을 종류·상태별로 모으고 선택한 원본만 정리하기</td></tr>
+    <tr><td>아침 알림 예약과 마지막으로 캡처를 확인한 시각</td><td>새 캡처가 쌓인 날에만 알림 보내기</td></tr>
+    <tr><td>정리 기록(그날 지운 장수 등), 알림 시각 등 설정</td><td>기록 보기, 설정 유지</td></tr>
+    <tr><td>광고 동의 선택과 관련 설정값(Google 동의 SDK가 저장)</td><td>광고 동의를 매번 다시 묻지 않기</td></tr>
+  </table>
+  <p>앞의 다섯 가지는 기기 안에만 있으며 서버로 보내지 않습니다. 광고 동의 선택은 광고를 요청할 때 Google에 함께 전달됩니다.</p>
+
+  <h2>3. 캡처와 사진 지우기</h2>
+  <p>앱은 이용자가 지우기를 누른 캡처와 직접 선택한 사진만, 안드로이드 확인 창(또는 이용자가 켠 미디어 관리 권한)을 거쳐 기기의 휴지통으로 옮깁니다. 휴지통의 캡처는 30일 동안 되살릴 수 있고, 그 뒤 안드로이드가 영구 삭제합니다. 앱의 '최근 지운 사진'에서 '완전히 지우기'나 '휴지통 비우기'를 한 번 더 눌러 확인하면 30일을 기다리지 않고 영구 삭제하며, 이때도 안드로이드 확인 창(또는 미디어 관리 권한)을 거칩니다.</p>
+
+  <p>iOS에서는 이용자의 삭제 요청을 iOS 확인 창을 거쳐 사진 앱의 최근 삭제된 항목으로 보냅니다. 앱 안에서 직접 복구하거나 영구 삭제할 수 없으므로 사진 앱에서 관리합니다.</p>
+
+  <h2>4. 기기 안의 글자 인식과 사진 분류</h2>
+  <p>글자 인식은 Google Play 서비스로 내려받는 한국어 모델로, 사진 분류는 같은 방식으로 내려받는 이미지 분류 모델과 글자 인식으로 기기 안에서 이루어지며, 사진과 읽은 글자, 확인 결과는 전송되지 않습니다. iOS에서는 Apple Vision으로 기기 안에서 사진 분류와 글자 인식을 처리합니다. 흔들림·중복 비교용 수치와 지문도 기기 안에서만 계산합니다. ML Kit는 진단과 사용 분석을 위해 다음 정보를 HTTPS로 Google에 보냅니다.</p>
+  <ul>
+    <li>기기 정보(제조사, 모델, OS 버전·빌드, 사용 가능한 하드웨어 가속기)</li>
+    <li>앱 정보(패키지 이름, 앱 버전)</li>
+    <li>설치별 식별자(이용자나 기기를 식별하려는 것이 아닌 값)</li>
+    <li>성능 지표(처리 시간 등), API 설정, 입력·결과 크기, 기능 버전, 이벤트 종류, 오류 코드</li>
+  </ul>
+  <p>자세한 내용은 <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit 데이터 공개 안내</a>를 따릅니다.</p>
+
+  <h2>5. 광고(Google AdMob)</h2>
+  <p>앱은 정리 결과 화면에서 나갈 때 가끔 나오는 전면 광고를 Google AdMob으로 보여 줍니다. 캡처를 지우거나 되살리는 데에는 광고나 횟수 제한이 없습니다. 광고를 위해 AdMob(Google 모바일 광고 SDK)이 다음 정보를 수집해 TLS로 암호화하여 Google에 보냅니다.</p>
+  <ul>
+    <li>광고 ID, 앱 세트 ID 등 기기 식별자</li>
+    <li>IP 주소(기기의 대략적인 위치를 추정하는 데 쓰일 수 있음)</li>
+    <li>광고와의 상호작용(앱 실행, 탭, 동영상 시청 등)</li>
+    <li>앱과 SDK의 성능 정보(앱 실행 시간 등 진단 정보)</li>
+  </ul>
+  <p>이 정보는 광고 게재와 측정, 분석, 부정 사용 방지에 쓰이며 Google이 정한 방식으로 처리됩니다(<a href="https://policies.google.com/technologies/partner-sites?hl=ko">Google이 파트너 사이트나 앱의 정보를 사용하는 방식</a>). 사진과 캡처 이미지, 읽은 글자, 살린 캡처의 내용은 광고에 쓰이지 않습니다. 광고 내용은 청소년(T) 등급 이하로 제한합니다.</p>
+  <p>유럽경제지역(EEA)·영국·스위스처럼 동의가 필요한 지역에서는 Google의 동의 메시지로 맞춤 광고 등에 대한 동의를 먼저 묻고, 선택은 앱의 설정 &gt; 광고 개인정보 설정에서 바꿀 수 있습니다. 어느 지역에서든 안드로이드 설정의 '광고' 메뉴(기기마다 위치가 다름)에서 광고 ID를 재설정하거나 삭제해 맞춤 광고를 받지 않을 수 있습니다.</p>
+
+  <h2>6. 제3자 제공과 국외 이전</h2>
+  <p>개인정보를 판매하지 않으며, 아래 외에는 제3자에게 제공하지 않습니다. 4·5항의 정보는 앱을 쓰는 동안 미국 등의 Google로 전송(국외 이전)됩니다.</p>
+  <table>
+    <tr><th>항목</th><th>내용</th></tr>
+    <tr><td>이전받는 자</td><td>Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA · 문의는 <a href="https://policies.google.com/privacy?hl=ko">Google 개인정보처리방침</a>의 안내를 따름)</td></tr>
+    <tr><td>이전 국가</td><td>미국 등 Google이 데이터 센터를 운영하는 국가</td></tr>
+    <tr><td>이전 항목</td><td>광고: 광고 ID 등 기기 식별자, IP 주소, 광고와의 상호작용, 성능 정보(5항)<br>글자 인식: 기기·앱 정보, 설치별 식별자, 성능 지표(4항)</td></tr>
+    <tr><td>이전 시기와 방법</td><td>앱을 사용하는 동안 수시로, 네트워크를 통해 암호화하여 전송</td></tr>
+    <tr><td>이용 목적</td><td>광고 게재·측정, 분석, 부정 사용 방지, 글자 인식 기능 진단</td></tr>
+    <tr><td>보유·이용 기간</td><td>Google의 <a href="https://policies.google.com/technologies/retention?hl=ko">데이터 보관 정책</a>에 따름</td></tr>
+    <tr><td>거부 방법과 효과</td><td>광고 ID는 안드로이드 설정에서 삭제하거나 재설정할 수 있고, 동의가 필요한 지역에서는 앱의 설정 &gt; 광고 개인정보 설정에서 거부할 수 있습니다. 그 밖의 전송은 광고와 글자 인식에 필요해 앱 안에서 끌 수 없으므로, 원하지 않으면 앱을 삭제하면 됩니다.</td></tr>
+  </table>
+
+  <h2>7. 아동의 개인정보</h2>
+  <p>이 앱은 만 13세 미만 아동을 대상으로 하지 않습니다. 앱은 이름, 이메일, 전화번호, 정확한 위치 같은 개인정보를 받지 않습니다. 광고 ID와 IP 주소는 5항에 적은 목적으로만 쓰입니다.</p>
+
+  <h2>8. 방침 변경</h2>
+  <p>결제나 분석 기능을 추가하는 등 처리 내용이 바뀌면 이 페이지를 수정하고 시행일을 갱신합니다.</p>
+  <ul>
+    <li>2026년 10월 22일: 최초 시행</li>
+    <li>2026년 10월 26일: 광고(Google AdMob), 광고 ID, 국외 이전 항목 추가</li>
+    <li>2026년 10월 30일: 살린 캡처 알림을 새 캡처 아침 알림으로 바꾸고, 진동 권한과 영구 삭제 안내 추가</li>
+    <li>2026년 11월 7일: 선택 기능 '점심 사진도 정리'(평일 점심시간 카메라 사진의 기기 안 음식 사진 확인) 추가</li>
+    <li>2026년 11월 8일: 선택형 카테고리별 사진 정리, 흔들림·중복 분석 및 iOS 처리 방식 안내 추가</li>
+    <li>2026년 11월 9일: 앱 이름을 포토 디톡스로 바꾸고, 앱을 열면 최근 사진을 기기 안에서 분석해 정리할 만한 사진을 홈에 보여 주도록 변경. 사진 종류를 영수증·문서·서류·메모·필기·주차 위치·쇼핑·택배·음식 사진으로 정리하고, 분석 범위를 '더 확인하기'로 최대 3,000장까지 넓힘</li>
+  </ul>
+
+  <h2>9. 문의</h2>
+  <p>개발자: MOONGRAE<br>이메일: <a href="mailto:sky7700sky@naver.com">sky7700sky@naver.com</a></p>
+</main>
+</body>
+</html>
