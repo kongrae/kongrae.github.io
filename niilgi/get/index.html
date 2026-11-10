@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>내가 쓴 니 일기 받기</title>
+<meta name="description" content="사진은 내가, 일기는 친구가. 친구가 나인 척 써 주는 하루 일기.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="내가 쓴 니 일기">
+<meta property="og:description" content="사진은 내가, 일기는 친구가. 친구 초대를 받았다면 앱을 받고 초대 코드를 넣어 주세요.">
+<meta property="og:image" content="https://kongrae.github.io/niilgi/icon.png">
+<meta property="og:url" content="https://kongrae.github.io/niilgi/get/">
+<meta name="apple-itunes-app" content="app-id=6831650452">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+<script>
+  // 아이폰·아이패드는 바로 App Store로 보낸다(아이패드 데스크톱 모드는 Macintosh + 터치로 알아본다).
+  (function () {
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (ios) location.replace('https://apps.apple.com/kr/app/id6831650452');
+  })();
+</script>
+</head>
+<body><main>
+<h1><span class="dot"></span>내가 쓴 니 일기</h1>
+<p class="sub">사진은 내가, 일기는 친구가.</p>
+<p><a class="store" href="https://apps.apple.com/kr/app/id6831650452">App Store에서 받기</a></p>
+<p id="android" class="note">Android 앱은 준비 중이에요. Play 스토어에 올라오면 이 페이지에서 바로 받을 수 있어요.</p>
+<h2>초대를 받았다면</h2>
+<ol>
+<li>앱을 받고 카카오나 Apple로 로그인해요.</li>
+<li>'초대 코드로 들어가기'에 친구가 보낸 초대 코드를 넣어요.</li>
+<li>그날 사진 알림이 오면 한 장 찰칵. 밤에는 친구인 척 일기를 써 줘요.</li>
+</ol>
+<nav><a href="../">앱 소개</a><a href="../privacy.html">개인정보처리방침</a></nav>
+<footer>개발자 MOONGRAE · 문의 <a href="mailto:sky7700sky@naver.com">sky7700sky@naver.com</a></footer>
+</main></body></html>
