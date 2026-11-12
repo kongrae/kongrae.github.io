@@ -12,17 +12,24 @@
 <link rel="stylesheet" href="../style.css">
 <script>
   // 아이폰·아이패드는 바로 App Store로 보낸다(아이패드 데스크톱 모드는 Macintosh + 터치로 알아본다).
+  // 주소에 ?c=youtube 처럼 채널 이름이 있으면 App Store 캠페인 링크(pt, ct)로 보내, App Store Connect 분석 > 캠페인에서
+  // 채널별 다운로드를 본다(설치 5건 이상부터 보임).
+  var STORE = (function () {
+    var m = /[?&]c=([a-z0-9_-]{1,40})/i.exec(location.search);
+    return 'https://apps.apple.com/kr/app/id6831650452' + (m ? '?pt=129746363&ct=' + m[1].toLowerCase() + '&mt=8' : '');
+  })();
   (function () {
     var ua = navigator.userAgent || '';
     var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-    if (ios) location.replace('https://apps.apple.com/kr/app/id6831650452');
+    if (ios) location.replace(STORE);
   })();
 </script>
 </head>
 <body><main>
 <h1><span class="dot"></span>내가 쓴 니 일기</h1>
 <p class="sub">사진은 내가, 일기는 친구가.</p>
-<p><a class="store" href="https://apps.apple.com/kr/app/id6831650452">App Store에서 받기</a></p>
+<p><a class="store" id="store" href="https://apps.apple.com/kr/app/id6831650452">App Store에서 받기</a></p>
+<script>document.getElementById('store').href = STORE;</script>
 <p id="android" class="note">Android 앱은 준비 중이에요. Play 스토어에 올라오면 이 페이지에서 바로 받을 수 있어요.</p>
 <h2>초대를 받았다면</h2>
 <ol>
