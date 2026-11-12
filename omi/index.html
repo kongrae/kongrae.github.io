@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오뭐입 · 오늘 뭐 입지</title>
+<style>
+/* 지원 페이지. https://kongrae.github.io/omi/ 에 게시 (저장소 kongrae/kongrae.github.io, 폴더 omi/). 원본: omi 저장소 site/omi/. */
+:root { --bg: #2F5BFF; --panel: #FFFFFF; --text: #111111; --on-bg: #FFFFFF; --lime: #D4FF3F; --muted: #5C5C5C; color-scheme: light; }
+body { margin: 0; background: var(--bg); color: var(--on-bg); font: 16px/1.7 "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; word-break: keep-all; }
+main { max-width: 42rem; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; }
+.logo { display: inline-block; background: #fff; color: var(--text); font-weight: 900; font-size: 1.2rem; padding: 2px 12px; border: 2.5px solid var(--text); border-radius: 12px; box-shadow: 3px 3px 0 var(--text); transform: rotate(-3deg); }
+img.icon { width: 96px; height: 96px; border-radius: 22px; border: 2.5px solid var(--text); box-shadow: 4px 4px 0 var(--text); display: block; margin: 20px 0 8px; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 16px 0 4px; }
+h1 span { color: var(--lime); text-shadow: 2px 2px 0 var(--text); }
+h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
+.card { background: var(--panel); color: var(--text); border: 2.5px solid var(--text); border-radius: 18px; box-shadow: 5px 5px 0 var(--text); padding: 12px 16px; margin: 12px 0; }
+.card p { margin: .3rem 0; }
+.card b { font-weight: 900; }
+a { color: var(--lime); font-weight: 700; }
+.card a { color: #2F5BFF; }
+</style>
+</head>
+<body>
+<main>
+  <span class="logo">오뭐입</span>
+  <img class="icon" src="icon.png" alt="오뭐입 앱 아이콘">
+  <h1>아침마다<br><span>뭐 입지?</span></h1>
+  <p>내가 찍어 넣은 옷으로, 오늘 날씨와 상황에 맞는 코디를 골라 드려요.</p>
+
+  <h2>자주 묻는 것</h2>
+  <div class="card">
+    <p><b>로그인 없이 써도 되나요?</b></p>
+    <p>네. '로그인 없이 둘러보기'로 시작하면 옷장이 이 iPhone의 계정에 저장돼요. 기기를 바꾸면 그 옷장으로 다시 들어올 수 없어요.</p>
+  </div>
+  <div class="card">
+    <p><b>위치를 꼭 허용해야 하나요?</b></p>
+    <p>아니요. 허용하지 않으면 서울 날씨로 코디를 골라요. 허용해도 정확한 위치는 저장하지 않아요.</p>
+  </div>
+  <div class="card">
+    <p><b>코디가 너무 춥거나 더워요.</b></p>
+    <p>코디를 고른 날 저녁에 '추웠음·딱 좋음·더웠음'을 눌러 주세요. 다음 날부터 1°씩 맞춰 가요. 나 탭의 체감 보정에서 직접 바꿀 수도 있어요.</p>
+  </div>
+  <div class="card">
+    <p><b>계정과 데이터를 지우고 싶어요.</b></p>
+    <p>나 탭 맨 아래 '계정과 데이터 지우기'를 누르면 옷 사진, 옷장, 코디 기록이 서버와 iPhone에서 바로 지워져요.</p>
+  </div>
+
+  <h2>문의</h2>
+  <div class="card">
+    <p>문제나 제안은 메일로 보내 주세요. 어떤 화면에서 무엇을 했는지 적어 주시면 빨리 고칠 수 있어요.</p>
+    <p><a href="mailto:sky7700sky@naver.com">sky7700sky@naver.com</a></p>
+  </div>
+
+  <p><a href="privacy.html">개인정보처리방침</a></p>
+</main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 · 오뭐입</title>
+<style>
+/* 읽기 쉬운 단순한 페이지. https://kongrae.github.io/omi/privacy.html 에 게시 (저장소 kongrae/kongrae.github.io, 폴더 omi/). 원본: omi 저장소 site/omi/. */
+:root { --bg: #F3F5FF; --panel: #FFFFFF; --text: #111111; --muted: #5C5C5C; --accent: #2F5BFF; --line: #E3E6F2; color-scheme: light; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; word-break: keep-all; }
+main { max-width: 42rem; margin: 0 auto; padding-inline: 16px; padding-block: 32px 48px; }
+h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; color: var(--accent); }
+p, li { margin: .4rem 0; }
+a { color: var(--accent); }
+.meta { color: var(--muted); font-size: .9rem; margin: 0; }
+.box { background: var(--panel); border-radius: 12px; padding: 12px 16px; }
+.scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; background: var(--panel); border-radius: 12px; }
+th, td { text-align: left; padding: 8px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; }
+</style>
+</head>
+<body>
+<main>
+  <h1>개인정보처리방침</h1>
+  <p class="meta">오뭐입 - 오늘 뭐 입지(iOS 앱) · 시행일 2026년 11월 12일</p>
+
+  <h2>요약</h2>
+  <div class="box">
+    <p>오뭐입은 내가 찍어 넣은 옷으로 그날 날씨와 상황에 맞는 코디를 골라 주는 앱입니다. 이를 위해 <b>옷 사진과 옷 정보, 취향, 코디 기록</b>을 서버(Supabase 서울 리전)에 저장하고, 옷 정보를 읽거나 코디를 고를 때 <b>AI(Anthropic Claude)</b>에 필요한 내용만 보냅니다.</p>
+    <p>정확한 위치는 저장하지 않으며 AI에도 보내지 않습니다. 광고와 분석 도구, 이용자 추적이 없습니다. 나 탭의 <b>'계정과 데이터 지우기'</b>로 언제든 모두 지울 수 있습니다.</p>
+  </div>
+
+  <h2>1. 처리하는 정보와 목적</h2>
+  <div class="scroll"><table>
+    <tr><th>항목</th><th>목적</th><th>보관</th></tr>
+    <tr><td>계정: 로그인 없이 쓰면 무작위 계정 ID만. Apple로 로그인하면 Apple이 주는 계정 ID와 이메일(‘나의 이메일 가리기’를 고르면 Apple 중계 주소), 처음 한 번 받는 이름(선택)</td><td>내 옷장을 다른 사람과 구분하고 다시 들어오기</td><td rowspan="6">계정을 지울 때까지</td></tr>
+    <tr><td>취향: 출생 연도, 성별(선택), 좋아하는 스타일, 출근 복장, 체감 보정 값</td><td>연령대와 취향에 맞는 코디, 추위·더위 타는 정도 반영</td></tr>
+    <tr><td>옷장: 배경을 지운 옷 사진, 이름·종류·색·보온·격식·스타일 등 옷 정보, 세탁 중 같은 상태, 입은 횟수와 마지막으로 입은 날</td><td>옷장 보여 주기, 코디 고르기, 최근 입은 옷 빼기</td></tr>
+    <tr><td>코디 기록: 날짜, 상황(출근·데이트 등), 날씨 요약(체감 기온, 비·눈, 바람, <b>시·구 단위 지역 이름</b>), 받은 코디와 이유, 고른 코디와 고른 시각</td><td>그날 받은 코디 다시 보여 주기, 입은 기록</td></tr>
+    <tr><td>저녁 피드백: 고른 코디가 추웠는지·딱 좋았는지·더웠는지</td><td>다음 날 코디의 체감 보정</td></tr>
+    <tr><td>AI 사용 기록: 시각, 종류(옷 정보·코디), 사용량과 비용, 성공 여부</td><td>하루 사용 상한 지키기, 비용 관리</td></tr>
+  </table></div>
+  <p>만 14세 미만은 가입할 수 없습니다(출생 연도에서 고를 수 없습니다).</p>
+
+  <h2>2. 앱이 사용하는 권한</h2>
+  <div class="scroll"><table>
+    <tr><th>권한</th><th>목적</th></tr>
+    <tr><td>카메라</td><td>옷을 찍어 옷장에 넣기</td></tr>
+    <tr><td>사진(선택한 사진만)</td><td>앨범에서 고른 옷 사진을 옷장에 넣기</td></tr>
+    <tr><td>사진 추가</td><td>코디 공유 이미지를 사진 앱에 저장하기(이용자가 '사진에 저장'을 누를 때만)</td></tr>
+    <tr><td>위치(앱 사용 중, 선택)</td><td>지금 있는 곳의 날씨 보기. 허용하지 않으면 서울 기준으로 봅니다</td></tr>
+    <tr><td>알림(선택)</td><td>아침 코디, 코디를 고른 날 저녁 피드백 알림</td></tr>
+  </table></div>
+  <p>배경 지우기는 iPhone 안에서 합니다. 원본 사진은 서버로 보내지 않고, 배경을 지운 옷 사진만 저장합니다.</p>
+
+  <h2>3. 위치와 날씨</h2>
+  <p>위치를 허용하면 iPhone이 좌표를 구하고, 앱은 이를 약 1km 단위로 줄여 날씨 예보 서비스 <a href="https://open-meteo.com/en/terms">Open-Meteo</a>에 보냅니다. 지역 이름(예: 서울 마포구)은 Apple의 지도 기능으로 알아냅니다. 좌표는 서버에 저장하지 않으며, 시·구 이름만 코디 기록의 날씨 요약에 함께 남습니다.</p>
+
+  <h2>4. AI(Anthropic) 처리와 국외 이전</h2>
+  <p>옷 정보를 채우고 코디를 고르기 위해 아래 내용을 미국의 Anthropic, PBC에 암호화된 연결(HTTPS)로 보냅니다. 이용자의 이름, 이메일, 계정 ID, 위치 좌표는 보내지 않습니다.</p>
+  <div class="scroll"><table>
+    <tr><th>언제</th><th>보내는 내용</th></tr>
+    <tr><td>옷을 넣을 때</td><td>배경을 지운 옷 사진 1장(흰 바탕, 긴 변 약 1,000px), 스타일 목록</td></tr>
+    <tr><td>코디를 받을 때</td><td>후보 옷들의 정보(종류·색·보온·격식 등), 날씨 요약(체감 기온, 비·눈, 바람), 상황, 연령대, 좋아하는 스타일, 출근 복장, 추위·더위 타는 정도</td></tr>
+  </table></div>
+  <p>Anthropic은 상업용 API 약관에 따라 이 내용을 답을 만드는 데만 쓰고 AI 학습에 쓰지 않습니다. 보관과 삭제는 <a href="https://www.anthropic.com/legal/privacy">Anthropic 개인정보처리방침</a>을 따릅니다. 이 국외 이전은 옷 등록과 코디 추천에 꼭 필요하므로, 거부하려면 이 두 기능을 쓰지 않아야 하며 이 경우 서비스를 이용하기 어렵습니다. 이미 보낸 뒤에는 '계정과 데이터 지우기'로 서버의 데이터를 지울 수 있습니다.</p>
+
+  <h2>5. 처리 위탁</h2>
+  <div class="scroll"><table>
+    <tr><th>받는 곳</th><th>하는 일</th></tr>
+    <tr><td>Supabase, Inc.(미국) — 서울 리전 서버(대한민국)</td><td>계정, 취향, 옷장, 옷 사진, 코디 기록, 피드백, AI 사용 기록 저장</td></tr>
+    <tr><td>Anthropic, PBC(미국)</td><td>4항의 AI 처리</td></tr>
+    <tr><td>Apple Inc.(미국)</td><td>Apple로 로그인, 지역 이름 찾기, 앱 배포(App Store·TestFlight)</td></tr>
+  </table></div>
+  <p>개인정보를 판매하거나 광고 목적으로 제3자에게 제공하지 않습니다.</p>
+
+  <h2>6. 기기 안에만 저장되는 정보</h2>
+  <p>빠르게 보여 주기 위한 옷 사진 사본, 취향 사본, 시·구 이름, 알림 설정, 홈 화면 위젯에 보여 줄 오늘 코디는 iPhone 안에만 저장되며 앱을 지우면 함께 지워집니다.</p>
+
+  <h2>7. 코디 공유</h2>
+  <p>'코디 공유'로 만드는 이미지는 iPhone 안에서 만들어지며, 이용자가 저장하거나 다른 앱으로 보낼 때만 밖으로 나갑니다. 이미지에는 지역 이름을 넣지 않습니다.</p>
+
+  <h2>8. 지우기와 이용자의 권리</h2>
+  <p>나 탭 › <b>계정과 데이터 지우기</b>를 누르면 서버의 계정, 옷 사진, 옷장, 코디 기록, 피드백, 취향이 바로 지워지고 iPhone 안의 사본도 지워집니다. AI 사용 기록은 누구의 것인지 알 수 없게 계정과의 연결을 끊은 채 비용 통계로만 남습니다. 서버 백업에 남은 사본은 백업 보관 기간이 지나면 자동으로 사라집니다.</p>
+  <p>나 탭에서 취향과 체감 보정을 언제든 바꿀 수 있고, 옷장에서 옷 정보를 고치거나 지울 수 있습니다. 열람, 정정, 삭제, 처리 정지를 요청하려면 아래 문의처로 연락해 주세요.</p>
+  <p>로그인 없이 쓰다가 '로그인 화면으로'를 누르면 그 옷장에는 다시 들어올 수 없습니다. 지우고 싶다면 먼저 '계정과 데이터 지우기'를 눌러 주세요.</p>
+
+  <h2>9. 결제</h2>
+  <p>지금은 유료 기능이 없습니다. 구독을 시작하면 결제는 Apple이 처리하며 앱은 카드 정보를 받지 않습니다. 이때 이 방침을 고칩니다.</p>
+
+  <h2>10. 안전 조치</h2>
+  <p>모든 전송은 HTTPS로 암호화합니다. 서버의 데이터는 행 단위 보안으로 본인 계정에서만 읽고 쓸 수 있고, 옷 사진은 비공개 저장소에 둡니다. AI 키 같은 비밀 값은 앱에 넣지 않고 서버에만 둡니다.</p>
+
+  <h2>11. 방침 변경</h2>
+  <p>카카오·Google 로그인이나 결제처럼 처리 내용이 바뀌면 이 페이지를 고치고 시행일을 갱신합니다.</p>
+  <ul>
+    <li>2026년 11월 12일: 최초 시행</li>
+  </ul>
+
+  <h2>12. 문의</h2>
+  <p>개인정보 보호책임자·개발자: MOONGRAE<br>이메일: <a href="mailto:sky7700sky@naver.com">sky7700sky@naver.com</a></p>
+</main>
+</body>
+</html>
