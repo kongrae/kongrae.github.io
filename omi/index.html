@@ -19,6 +19,9 @@ h2 { font-size: 1.1rem; margin: 2rem 0 .5rem; }
 .card b { font-weight: 900; }
 a { color: var(--lime); font-weight: 700; }
 .card a { color: #2F5BFF; }
+/* 앱 받기 버튼 (출시 전에는 TestFlight 베타, 출시 뒤에는 App Store 링크로 바꾼다) */
+a.get { display: block; text-align: center; background: var(--lime); color: var(--text); text-decoration: none; font-weight: 900; font-size: 1.15rem; padding: 14px 16px; border: 2.5px solid var(--text); border-radius: 16px; box-shadow: 4px 4px 0 var(--text); margin: 12px 0 4px; }
+ol { margin: .3rem 0; padding-left: 1.3rem; }
 </style>
 </head>
 <body>
@@ -27,6 +30,17 @@ a { color: var(--lime); font-weight: 700; }
   <img class="icon" src="icon.png" alt="OMI 앱 아이콘">
   <h1>아침마다<br><span>뭐 입지?</span></h1>
   <p>내가 찍어 넣은 옷으로, 오늘 날씨와 상황에 맞는 코디를 골라 드려요.</p>
+
+  <h2 id="get">앱 받기 (iPhone)</h2>
+  <div class="card">
+    <p>지금은 출시 전 베타라 Apple의 <b>TestFlight</b> 앱으로 받아요. 무료예요.</p>
+    <ol>
+      <li>App Store에서 <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight</a>를 받아요.</li>
+      <li>아래 버튼을 눌러 OMI 베타에 들어와요.</li>
+      <li>TestFlight에서 '설치'를 누르면 끝!</li>
+    </ol>
+    <a class="get" href="https://testflight.apple.com/join/yDfnwxsk">OMI 베타 받기</a>
+  </div>
 
   <h2>자주 묻는 것</h2>
   <div class="card">
